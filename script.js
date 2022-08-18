@@ -7,17 +7,20 @@ function changeWeight() {
 
     let spanWeight = document.getElementById("spanWeight");
     spanWeight.innerHTML = peso.value;
+
 }
+
 
 function changeHeight () {
 
     let spanHeight = document.getElementById ("spanHeight");
     spanHeight.innerHTML= altura.value;
+
 }
 
 const imcCalc = () => {
 
-    if (peso.value === 0 && altura.value === 0) {
+    if (peso.value !== 0 && altura.value !== 0) {
         const imc = (peso.value / (altura.value * altura.value)).toFixed(2);
         let classification = '';
 
